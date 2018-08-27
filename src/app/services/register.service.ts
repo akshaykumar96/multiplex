@@ -18,7 +18,7 @@ export class RegisterService {
     
    }
 
-  userUrl:string="http://localhost:9955/"
+  userUrl:string="http://18.136.65.50:9008/register/"
 
   create(item:UserModel){
     let body= JSON.stringify(item);

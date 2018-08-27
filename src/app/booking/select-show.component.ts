@@ -7,23 +7,40 @@ import { SelectService } from '../services/select.service';
 import {ProductService  } from "../services/booking.service";
 import { BookingModel } from '../models/booking-model';
 import { Router, ActivatedRoute } from "@angular/router";
+import { DatePipe } from '../../../node_modules/@angular/common';
+
 
 @Component({
   selector: 'app-select-show',
   templateUrl: './select-show.component.html',
-  styleUrls: ['./select-show.component.css']
+  styleUrls: ['./select-show.component.css'],
+  providers: [DatePipe]
 })
 export class SelectShowComponent implements OnInit {
+
+   today:number = Date.now();
   models:BookingModel;
  model:SelectModel;
  productList:Array<BookingModel>;
-  constructor(public service: SelectService, public router: Router,private service1:ProductService,private route: ActivatedRoute) {
-    this.model = new SelectModel("","","","","","");
+  constructor(public datepipe: DatePipe,public service: SelectService, public router: Router,private service1:ProductService,private route: ActivatedRoute) {
+    this.model = new SelectModel("0","0",new Date(),"0","0","0");
+    console.log(this.model.daate);
    }
 
+   
   ngOnInit() {
-    this.models=new BookingModel(0,"","","","","","","");
+
+
+    let latest_date =this.datepipe.transform(this.today, 'yyyy-MM-dd');
+      document.getElementById("date").setAttribute("min",latest_date);
+      console.log(latest_date);
+
+
+    this.models=new BookingModel(0,0,"0","0","0","0","0","0");
     let id=parseInt(this.route.snapshot.paramMap.get("id"));
+
+
+    
   
   console.log(`selected Id:${id}`);
   
@@ -35,18 +52,18 @@ export class SelectShowComponent implements OnInit {
  // this.service.getAll();
   }
 checkValid(){
-  if(this.model.noOfTickets==="NULL")
+  if(this.model.noOfTickets==="0")
   { console.log('ticketempty');
     return false;}
 
-  else if(this.model.classs==="NULL")
+  else if(this.model.classs==="0")
   { console.log('screenempty');
     return false;}
   
-  else if(this.model.screen==="NULL")
+  else if(this.model.screen==="0")
   { console.log('timingempty');
     return false;}
-  else if(this.model.shows==="NULL")
+  else if(this.model.shows==="0")
   { console.log('classempty');
     return false;}
   else 

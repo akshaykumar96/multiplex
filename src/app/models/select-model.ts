@@ -5,7 +5,7 @@ export class SelectModel {
     timings:string;
     screen: string;
     shows: string;
-    daate:string;
+    daate:Date;
     total:string;
 
     constructor(noOfTickets,classs,daate,screen,shows,total)

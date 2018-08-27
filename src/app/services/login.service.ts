@@ -7,7 +7,7 @@ import { LoginModel } from '../models/login-model';
 })
 export class LoginService {
 
-  url:string="http://localhost:9955/login"
+  url:string="http://18.136.65.50:9008/register/login"
 
   constructor(private http: HttpClient) { }
   

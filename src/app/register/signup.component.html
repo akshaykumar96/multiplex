@@ -22,7 +22,7 @@
                   </span>  
                 </div>  
                 <input id="fullName" name="fullName" [(ngModel)]="model.fullName" 
-                required #fullName="ngModel"
+                required #fullName="ngModel" placeholder="Enter Fullname"
                 type="text" class="form-control"/>
                 <br>
               </div>  
@@ -45,7 +45,7 @@
                   </span>  
                 </div>  
                 <input id="userName" type="text" class="form-control" name="userName"
-                required minlength="4" [(ngModel)]="model.userName" #userName= "ngModel"/>
+                required minlength="4" [(ngModel)]="model.userName" #userName= "ngModel" placeholder="Enter username"/>
                 
                 <br>
                 
@@ -68,7 +68,7 @@
                       <i class="fa fa-phone"></i>  
                     </span>  
                   </div>  
-                  <input id="phone" name="phone" type="text" class="form-control" [(ngModel)]="model.phone"
+                  <input id="phone" name="phone" type="text" class="form-control" [(ngModel)]="model.phone" placeholder="Enter phone number"
                    required minlength="10"  maxlength="10" #phone="ngModel" />  
                 </div>  
                 
@@ -91,7 +91,7 @@
                       <i class="fa fa-envelope"></i>  
                     </span>  
                   </div>  
-                  <input type="text" id="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  ngModel #emailref="ngModel">
+                  <input type="text" id="email" name="email" placeholder="Enter email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  ngModel #emailref="ngModel">
                   
                   
                    
@@ -115,7 +115,7 @@
                         <i class="fa fa-lock"></i>  
                       </span>  
                     </div>  
-                    <input id="password1" name="password1"  type="password" class="form-control"
+                    <input id="password1" name="password1"  type="password" placeholder="Enter password" class="form-control"
                      required minlength="8" [(ngModel)]="model.password" #password1="ngModel" />  
                   </div>  
                   <div  [hidden]="password1.valid||password1.pristine">
@@ -136,7 +136,7 @@
                       </span>  
                     </div>  
                     <input id="password" name="password"  type="password" class="form-control"
-                     [(ngModel)]="model.password" #password="ngModel" />  
+                     [(ngModel)]="model.password" #password="ngModel" placeholder="Re-enter password" />  
                   </div>  
                 </div>  
               </div>  

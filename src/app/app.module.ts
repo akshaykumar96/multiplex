@@ -19,6 +19,7 @@ import { FormsModule } from '../../node_modules/@angular/forms';
 
 
 
+
 const routes:Routes=[
 
   {path:"home", component:SearchComponent},
@@ -49,7 +50,7 @@ const routes:Routes=[
     BookingModule, 
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

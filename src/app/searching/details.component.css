@@ -2,6 +2,19 @@ body {
     padding-top: 54px;
   }
   
+
+  .btn-info {
+    color: #fff;
+    background-color: #0495c9;
+    border-color: #357ebd; /*set the color you want here*/
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #045775;
+  border-color: #0e508a; /*set the color you want here*/
+}
+
   @media (min-width: 992px) {
     body {
       padding-top: 56px;

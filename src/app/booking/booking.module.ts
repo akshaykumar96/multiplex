@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 import { BookingRoutingModule } from './booking-routing.module';
 import { BookComponent } from './book.component';
@@ -16,6 +16,8 @@ import { LoadingPageComponent } from './loading-page.component';
     BookingRoutingModule, SearchingModule
   ],
   declarations: [BookComponent,ConfirmationComponent,PaymentComponent, SelectShowComponent,LoadingPageComponent],
-  exports: [BookComponent,ConfirmationComponent,PaymentComponent, SelectShowComponent,LoadingPageComponent]
+  exports: [BookComponent,ConfirmationComponent,PaymentComponent, SelectShowComponent,LoadingPageComponent],
+  providers:[DatePipe]
+ 
 })
 export class BookingModule { }

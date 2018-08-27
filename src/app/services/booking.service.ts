@@ -16,8 +16,8 @@ export class ProductService {
   constructor(private http:HttpClient) { 
     //this.productList = products;
   }
-  productUrl: string = "http://localhost:8123/api/booking"
-  productUrlshort: string = "http://localhost:8123/api/shortbooking"
+  productUrl: string = "http://18.136.65.50:9008/bookingTicket/api/booking"
+  productUrlshort: string = "http://18.136.65.50:9008/bookingTicket/api/shortbooking"
 
   getAll(){
     return this.http.get(this.productUrl);
