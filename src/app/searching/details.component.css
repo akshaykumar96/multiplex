@@ -1,0 +1,19 @@
+body {
+    padding-top: 54px;
+  }
+  
+  @media (min-width: 992px) {
+    body {
+      padding-top: 56px;
+    }
+  } 
+  /* .container {
+    width: 200px;
+    height: 120px;
+} */
+
+/* resize images */
+.container img {
+    width: auto;
+    height: auto;
+}

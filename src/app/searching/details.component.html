@@ -1,0 +1,51 @@
+<div class="container">
+     <div class="row"> 
+    <div class="col-md-8">
+
+      <div class="card mt-4">
+        <img class="card-img-top" src="assets\images\avatars\v3-2.jpg" alt="">
+        </div>
+        <div >
+        <div class="card-body">
+          <a class="btn btn-success" [routerLink]="['/select',model.id]">BOOK NOW</a>
+        </div>
+        </div>
+        
+                   
+        </div>
+        <div class="col-md-4" style="margin-top:40px" >
+          
+          <label style="color:yellow">Movie Name</label> 
+          <div>
+      
+          <button  style="color:blue"> {{model.movieFirstName}} {{model.movieSecondName}}</button> 
+
+        </div>
+        <br>
+        <label style="color:yellow">Movie Details</label>
+        <div>
+            <!-- <textarea style="color:blue" rows="5" cols="60" [(ngModel)]="model.details"></textarea> -->
+            <button  style="color:blue" > {{model.details}}</button> 
+        </div>
+        <br>
+        <label style="color:yellow">Movie Ratings</label>
+        <div>
+          <input style="color:blue" type="text" [(ngModel)]="model.ratings"   />
+        </div>
+        <br>
+        <label style="color: yellow">Movie Genre</label>
+        <div>
+          <button  style="color:blue"type="text" size="35"> {{model.type}}</button> 
+        </div>
+        <br>
+        <label style="color: yellow">Movie Cast</label>
+        <div>
+          <button  style="color:blue"type="text" size="35"> {{model.cast}}</button>   
+         </div>
+          
+           
+        </div>
+        </div>
+      </div>
+
+

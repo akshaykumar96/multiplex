@@ -1,0 +1,77 @@
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Freebie: 12 Practical Templates For List Pages</title>
+
+    <link rel="stylesheet" href="assets/css/article-lists/article-list-basic.css">
+
+</head>
+<body>
+
+    <ul class="article-list-basic">
+
+        <li>
+            <a href="#">
+                <img src="assets\images\avatars\download.jpg" alt="Industrial Mech" />
+            </a>
+            <div>
+                <h2><a href="#">Interesting article title</a></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis laoreet diam a, volutpat magna.</p>
+                <a href="#" class="read-more"[routerLink]="['/details']">Read more &rarr;</a>
+            </div>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="assets\images\avatars\v3-2.jpg"  alt="Sahale Wa" />
+            </a>
+            <div>
+                <h2><a href="#">Interesting article title</a></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis laoreet diam a, volutpat magna.</p>
+                <a href="#" class="read-more"[routerLink]="['/details']">Read more &rarr;</a>
+            </div>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="assets/images/pictures/sands-of-life.jpg"  alt="Sands of Life" />
+            </a>
+            <div>
+                <h2><a href="#">Interesting article title</a></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis laoreet diam a, volutpat magna.</p>
+                <a href="#" class="read-more"[routerLink]="['/details']">Read more &rarr;</a>
+            </div>
+        </li>
+
+    </ul>
+
+</body>
+
+</html> -->
+<div class="row">
+        <div class="col-4" *ngFor="let item of productList">
+            <div class="card shadow m-3" style="background-color:black;
+            opacity: .9;"  >
+                <div class="card-header">
+                    <a href="#">
+                        <img src="assets\images\avatars\download.jpg" alt="Industrial Mech" />
+                    </a>
+                <div class="card-body">
+                    <!-- <h2><a href="#">Interesting article title</a></h2> -->
+                    <h6 style="color: red">{{item.movieFirstName}}  {{item.movieSecondName}}</h6>
+                    <p style="color:blueviolet">{{item.details}}</p>
+                    <a href="#" class="read-more"[routerLink]="['/details',item.id]">Read more &rarr;</a>
+                    <!-- <input type="text" placeholder="Go To Movies." [(ngModel)]="model.movieFirstName" name="movieFirstName">               
+         <button type="search" class=" btn btn-lg btn-primary pull-right btn-lg" >Search</button> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
